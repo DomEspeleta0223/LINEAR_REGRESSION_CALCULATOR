@@ -74,7 +74,18 @@ public class CALC_CODE
             double Error = (SigmaYYHat2 / y) * 100;
             double Percentage = ((y - SigmaYYHat2) / y) * 100;
 
-
+            double ByxAbs = Math.Abs(Byx);
+            if (Byx >= 0)
+            {
+                string sign = " + ";
+                Console.WriteLine("\nEquation:\t" + "Y = " + Ayx + sign + ByxAbs + "X");
+            }
+            else
+            {
+                string sign = " - ";
+                Console.WriteLine("\nEquation:\t" + "Y = " + Ayx + sign + ByxAbs + "X");
+            }
+            
             Console.WriteLine("\n" + Percentage + "% of the scores of the variable Y is attributed to their scores in variable X");
             Console.WriteLine("\nYou Can Press Any Key To Clear All!");
 
